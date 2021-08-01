@@ -1,11 +1,11 @@
-// Assignment Code
+// // Assignment Code
 
 var generateBtn = document.querySelector("#generate");
 
 
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXWY";
 var lowercase = "abcdefghijklmnopqrstyvwzyz";
-var special = "!@#$%^&(-)";
+var special = "!@#$%^&";
 var numberChar = "1234567890";
 var userChoice = '';
 
@@ -21,41 +21,44 @@ generateBtn.addEventListener("click", thePassword)
 
 function passgen() {
     var result = "";
-    var length = prompt("pick a number between 8 and 128");
+    var length = prompt("pick a number between (8 and 128)");
+    if(isNaN(length)){
+    alert("between 8 and 128!")}
     return passgen()
-} 
+}
 
-    if(length > 8 && length<128) {
+    if(length<8 || length> 128) {
+        alert("Please for the love of God!");
+        return passgen()
+    }
 
     var wantsUpperCase = confirm("would you like uppercase letters?");
     var wantsLowerCase = confirm("would you like lowercase letters?");
     var wantsNumbers = confirm("would you like numbers?");
     var wantsSpecial = confirm("would you like special charicters?");
 
-    }
 
-    if(wantsUpperCase) {
-        userChoice += upperCase
-    }
+//     if(wantsUpperCase) {
+//         userChoice += upperCase
+//     }
 
-    if(wantsLowerCase) {
-        userChoice += lowercase
-    }
+//     if(wantsLowerCase) {
+//         userChoice += lowercase
+//     }
 
-    if (wantsNumbers) {
-        userChoice += numberChar
-    }
+//     if (wantsNumbers) {
+//         userChoice += numberChar
+//     }
     
-    if (wantsSpecial) {
-        userChoice += special
-    }
+//     if (wantsSpecial) {
+//         userChoice += special
+//     }
 
-if (i = 0; i < length; i++;) {
-    result += usserChoice.charAt(Math.floor(Math.random() * userChoice.length));
+// if (i = 0; i < length; i++;) {
+//     result += usserChoice.charAt(Math.floor(Math.random() * userChoice.length));
 
-    return result;
-}
-
+//     return result;
+// }
 
 
 
